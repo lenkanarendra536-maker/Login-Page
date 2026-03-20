@@ -1,60 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            background-image: url("https://img.freepik.com/free-photo/high-angle-view-laptop-stationeries-blue-background_23-2147880456.jpg");
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .main {
+
+            width: 30%;
+            padding: 1% 4% 3% 4%;
+            margin: auto;
+            margin-top: 1%;
+            margin-left: 10%;
+
+        }
+
+        .main h3 {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            font-size: 30px;
+        }
+
+        .main h3,
+        .redirect {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        
+
+        .sub input {
+            padding: 15px;
+            width: 93%;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+        }
+
+        a {
+            color: black;
+            font-weight: bold;
+        }
+
+        .sub,
+        .dob,
+        .radio,
+        .checkbox {
+            margin-bottom: 10px;
+        }
+
+        .checkbox {
+            padding-left: 1px;
+            padding-bottom: 15px;
+        }
+
+        .dob,.radio,.checkbox{
+            padding-left: 6px;
+        }
+
+
+        .dob,
+        .radio, .checkbox {
+            margin-bottom: 15px;
+        }
+      
+
+
+        .btn-grad {
+            background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
+        }
+
+        .btn-grad {
+            margin: 10px;
+            margin: 20px;
+            width: 90%;
+            margin-left: 3%;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-<center>
-    <form action="./login.html">
+    <form class="main" action="./login.html">
 
-        <h1>Registration Form</h1>
-        
-        <p>
-            Name: <input type="text" placeholder="Enter name" required />
-        </p>
+        <h3>CREATE ACCOUNT</h3>
 
-        <p>
-            Email: <input type="email" placeholder="Enter email" required/>
-        </p>
+        <div class="sub">
+            <input type="text" placeholder="Enter Full Name" required />
+        </div>
 
-        <p>
-            Password: <input type="password" placeholder="Enter Password" required />
-        </p>
+        <div class="sub">
+            <input type="number" placeholder="Enter Mobile Number" required />
+        </div>
 
-        <p>
-            Confirm Password: <input type="password" placeholder="Confirm Password" required/>
-        </p>
+        <div class="sub">
+            <input type="email" placeholder="Enter Email Id" required />
+        </div>
 
-        <p>
-            Mobile Number: <input type="text" placeholder="Enter Mobile No" required/>
-        </p>
+        <div class="sub">
+            <input type="password" placeholder="Enter Password" required />
+        </div>
 
-        <p>
-            <input type="radio" name="gender" required/>Male
-            <input type="radio" name="gender" required/>Female
-        </p>
-        
-        <p>
-            <input type="checkbox">10th
-            <input type="checkbox">Intermediate
-            <input type="checkbox">Degree
-            <input type="checkbox">Diploma
-            <input type="checkbox">Btech
-        </p>
+        <div class="sub">
+            <input type="password" placeholder="Confirm Password" required />
+        </div>
 
-        <!-- <p>
-            <input type="file">
-        </p> -->
+        <div class="dob">
+            DOB: <input type="date" required />
+        </div>
 
-        <p>
-            DOB: <input type="date" required/>
-        </p>
+        <div class="radio">
+            <label>
+            Gender: <input type="radio" name="gender" required />Male</label>
+                    <label><input type="radio" name="gender" required />Female</label>
+        </div>
+        <div class="checkbox">
+            <label>
+                Study: <input type="checkbox">10th
+            </label>
 
-        <button>Register</button>
+            <label>
+                <input type="checkbox">Intermediate
+            </label>
+
+            <label>
+                <input type="checkbox">Degree
+            </label>
+
+            <label>
+                <input type="checkbox">Diploma
+            </label>
+
+            <label>
+                <input type="checkbox">Btech
+            </label>
+        </div>
+
+
+        <div class="checkbox">
+            <input type="checkbox" id="T&C" required />
+            <label for="T&C">I agree to the users</label>
+            <a href="./t&c.html">Terms & Conditions </a>
+        </div>
+
+
+        <button class="btn-grad">SIGN UP</button>
+
+        <div class="redirect">
+            Have already an account? <a href="./login.html">Login</a>
+        </div>
 
     </form>
-</center>
+
 </body>
+
 </html>
